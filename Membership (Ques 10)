@@ -1,0 +1,6 @@
+memb(X, [X|_]).         % X is the head of the list
+memb(X, [_|Tail]) :- memb(X, Tail).  % Check if X is in the tail of the list
+
+ //Query 
+?- memb(3, [1, 2, 3, 4]).
+% Expected Output: true
