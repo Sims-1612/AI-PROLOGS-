@@ -1,0 +1,6 @@
+delete(1, [H|T], T).  % Remove the head of the list
+delete(N, [H|T], [H|R]) :- N > 1, N1 is N - 1, delete(N1, T, R).  % Remove at Nth position
+
+//Query
+?- delete(3, [1, 2, 3, 4], R).
+% Expected Output: R = [1, 2, 4]
