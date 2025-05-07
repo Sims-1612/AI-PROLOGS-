@@ -1,0 +1,6 @@
+power(_, 0, 1).  % Any number raised to the power of 0 is 1
+power(N, P, Ans) :- P > 0, P1 is P - 1, power(N, P1, Ans1), Ans is N * Ans1.  % Recursive case
+
+//Query
+?- power(2, 3, Ans).
+% Expected Output: Ans = 8
