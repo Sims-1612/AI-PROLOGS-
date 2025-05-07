@@ -1,0 +1,5 @@
+sum(X, Y, Z) :- Z is X + Y.
+
+//Query
+?- sum(3, 5, Z).
+% Expected Output: Z = 8
