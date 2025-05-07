@@ -1,0 +1,8 @@
+reverse([], []).  % Base case: the reverse of an empty list is an empty list
+reverse([H|T], R) :- reverse(T, RT), append(RT, [H], R).  % Reverse the tail and append the head
+
+
+// Query 
+?- reverse([1, 2, 3], R).
+% Expected Output: R = [3, 2, 1]
+
