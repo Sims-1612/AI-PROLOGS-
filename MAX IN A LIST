@@ -1,0 +1,6 @@
+maxlist([X], X).  % Base case: The maximum of a single element list is the element itself
+maxlist([H|T], M) :- maxlist(T, M1), M is max(H, M1).  % Compare the head with the max of the tail
+
+//qUERY 
+?- maxlist([1, 5, 3, 2], M).
+% Expected Output: M = 5
