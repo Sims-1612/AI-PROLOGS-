@@ -1,0 +1,10 @@
+evenlength([]).  % An empty list has an even length
+evenlength([_, _|T]) :- evenlength(T).  % If the tail of the list has an even length, the list has an even length
+
+oddlength([_]).  % A list with a single element has an odd length
+oddlength([_, _|T]) :- oddlength(T).  % If the tail of the list has an odd length, the list has an odd length
+
+
+//Query
+?- evenlength([1, 2, 3, 4]).
+% Expected Output: true
