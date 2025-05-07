@@ -1,0 +1,6 @@
+sumlist([], 0).  % The sum of an empty list is 0
+sumlist([H|T], S) :- sumlist(T, S1), S is H + S1.  % Add the head to the sum of the tail
+
+//Query
+?- sumlist([1, 2, 3, 4], S).
+% Expected Output: S = 10
