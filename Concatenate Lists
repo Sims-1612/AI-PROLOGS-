@@ -1,0 +1,5 @@
+conc([], L, L).           % If L1 is empty, L2 is the result
+conc([X|L1], L2, [X|L3]) :- conc(L1, L2, L3).  % Add X from L1 to L3
+
+//Query 
+?- conc([1, 2], [3, 4], L).
