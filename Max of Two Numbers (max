@@ -1,0 +1,6 @@
+max(X, Y, X) :- X >= Y.  % X is greater than or equal to Y
+max(X, Y, Y) :- X < Y.   % Y is greater than X
+
+//query
+?- max(10, 20, M).
+% Expected Output: M = 20
