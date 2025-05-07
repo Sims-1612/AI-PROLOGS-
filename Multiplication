@@ -1,0 +1,6 @@
+multi(X, 0, 0).  % Base case: any number multiplied by 0 is 0
+multi(X, Y, R) :- Y > 0, Y1 is Y - 1, multi(X, Y1, R1), R is R1 + X.  % Recursive case
+
+//Query
+?- multi(4, 5, R).
+% Expected Output: R = 20
