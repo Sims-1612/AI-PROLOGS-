@@ -8,3 +8,7 @@ oddlength([_, _|T]) :- oddlength(T).  % If the tail of the list has an odd lengt
 //Query
 ?- evenlength([1, 2, 3, 4]).
 % Expected Output: true
+
+//QUERY 2
+?- oddlength([1, 2, 3]).
+% Expected Output: true
