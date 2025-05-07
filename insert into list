@@ -1,0 +1,6 @@
+insert(1, I, L, [I|L]).  % Insert at the head of the list
+insert(N, I, [H|T], [H|R]) :- N > 1, N1 is N - 1, insert(N1, I, T, R).  % Insert at Nth position
+
+//Query
+?- insert(2, 9, [1, 2, 3, 4], R).
+% Expected Output: R = [1, 9, 2, 3, 4]
